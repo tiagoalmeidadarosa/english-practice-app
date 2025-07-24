@@ -13,7 +13,12 @@ export default function Home() {
   const [results, setResults] = useState<{
     correct: number;
     incorrect: number;
-    details: any[];
+    details: Array<{
+      portuguese: string;
+      userAnswer: string;
+      correctAnswer: string;
+      isCorrect: boolean;
+    }>;
   } | null>(null);
 
   useEffect(() => {
